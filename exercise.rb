@@ -23,8 +23,8 @@ def who_wins(ballots)
       end
     end
   end
-  p standings
-  standings.values.max(3)
+  standings
+  standings.max_by(3) { |a, b| b }
 end
 
 p who_wins(ballots)
